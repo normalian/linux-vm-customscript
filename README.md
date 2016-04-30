@@ -4,7 +4,7 @@
 # linux-vm-customscript
 A sample for creating Linux VM and setup the VM with a custom script using ARM template.
 
-## How to run
+## How to deploy?
 you can deploy linux vm customized by custom script.
 ```
 $rgName = 'example-resource-group'
@@ -13,5 +13,6 @@ New-AzureRmResourceGroup -Name $rgName -Location "West US"
 # validate your template files
 Test-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
 
+# deploy resources
 New-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
 ```
