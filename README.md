@@ -1,13 +1,8 @@
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw%2egithubusercontent%2ecom%2fnormalian%2flinux%2dvm%2dcustomscript%2fmaster%2flinux%2dvm%2dcustomscript%2ejson" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnormalian%2Flinux-vm-customscript%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 # linux-vm-customscript
 A sample for creating Linux VM and setup the VM with a custom script using ARM template.
-
-## How to setup 
-- Prepare a site for uploading setup_httpd.sh and index.html ( ex. http://myscriptuploadedsite.azurewebsites.net/ )
-- Edit uri of setup_httpd.sh and index.html.
-- Upload setup_httpd.sh and index.html to your BLOB or WebApps ( ex. http://myscriptuploadedsite.azurewebsites.net/setup_httpd.sh, http://myscriptuploadedsite.azurewebsites.net/index.html ).
 
 ## How to run
 you can deploy linux vm customized by custom script.
@@ -16,7 +11,7 @@ $rgName = 'example-resource-group'
 New-AzureRmResourceGroup -Name $rgName -Location "West US"
 
 # validate your template files
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile linux-vm-customscript.json -TemplateParameterFile linux-vm-customscript.parameters.json
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
 
-New-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile linux-vm-customscript.json -TemplateParameterFile linux-vm-customscript.parameters.json
+New-AzureRmResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
 ```
