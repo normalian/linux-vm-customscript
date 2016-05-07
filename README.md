@@ -5,7 +5,7 @@
 A sample for creating Linux VM and setup the VM with a custom script using ARM template. you can deploy a linux vm customized with custom script, and the script installs Aapche and deploy index.html into the vm.
 
 ## How to deploy?
-You can deploy the vm like below or press "Deploy button".
+You can deploy the vm like below or press "Deploy to Azure" button.
 ```
 $rgName = 'example-resource-group'
 New-AzureRmResourceGroup -Name $rgName -Location "West US"
